@@ -5,10 +5,7 @@ var generateBtn = document.querySelector("#generate");
 var minChar = 8;
 var maxChar = 128;
 var availableChar = ["lowercase","uppercase","numeric","special"];
-// var lowerStr = "abcdefghijklmnopqrstuvwxyz"; //to upper 
-// var upperStr = lowerStr.toUpperCase();
-// var numeric = "0123456789";
-// var specialChar = "!@#$%^&*()_+~`|}{[]\:;?><,./-=";
+
 var charSet = {
   "lowercase": "abcdefghijklmnopqrstuvwxyz",
   "uppercase": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
@@ -16,10 +13,9 @@ var charSet = {
   "special": "!@#$%^&*()_+~`|}{[]\:;?><,./-="
 };
 
-var password="";
-
 // Generate passwork
 function generatePassword() {
+  var password="";
 
   // prompt the user for the number of characters
   var numChar = prompt("What would you like the password length to be? it has to be between 8 and 128 characters");
@@ -68,6 +64,7 @@ function randomInt(n) {
 
 // Write password to the #password input
 function writePassword() {
+  var password = ""
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
